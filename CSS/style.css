@@ -1,7 +1,185 @@
+/* Setting up fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
 .lexend-font {
-  font-family: "Lexend", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Setting up pages */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.nav-bar-container {}
+
+.nav-bar-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-left: min(5em, 8%);
+    padding-right: min(5em, 8%);
+    padding-top: min(1.2rem, 8%);
+    padding-bottom: min(1.2rem, 8%);
+    background-color: rgb(249, 247, 243);
+}
+
+.btn-blog {
+    background-color: rgb(180, 244, 97);
+    border: none;
+    font-size: clamp(0.8rem, 1.25vw, 1.25rem);
+    font-weight: 700;
+    padding-top: min(0.5em, 8%);
+    padding-bottom: min(0.5em, 8%);
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    border-radius: 8px;
+}
+
+
+.nav-bar-pagetitle {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5rem, 1.8vw, 1.8rem);
+}
+
+.pagetitle {
+    font-size: clamp(0.8rem, 1.4vw, 1.4rem);
+}
+
+.amount-container {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+/* Main Section */
+.toggle-buttons {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-top: clamp(1em, 10vh, 5em);
+}
+
+.toggle-buttons>button {
+    background-color: white;
+    border: 1px solid gray;
+    color: gray;
+    font-size: clamp(0.8rem, 1.25vw, 1.25rem);
+    font-weight: 600;
+    padding-top: min(0.5em, 8%);
+    padding-bottom: min(0.5em, 8%);
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    border-radius: 8px;
+}
+
+/* Donation Part */
+.donation-container {
+    padding-top: clamp(3em, 8vh, 5em);
+    padding-bottom: clamp(3em, 8vh, 5em);
+    padding-left: clamp(1em, 15vw, 15em);
+    padding-right: clamp(1em, 15vw, 15em);
+
+}
+
+.donation {
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    padding: 1em;
+    border-radius: 8px;
+    gap: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.donation-image {
+    width: 50%;
+    height: auto;
+}
+
+.donation-info {
+    width: 50%;
+}
+
+.donation-location-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.donation-amount {
+    background-color: whitesmoke;
+    padding: .2em;
+    width: clamp(5.2em, 18%, 5.2em);
+    border-radius: 5px;
+}
+
+.donation-location-heading {
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+    margin-top: 0.5em;
+    margin-bottom: 0.8em;
+}
+
+.donation-location-desc {
+    color: rgba(17, 17, 17, 0.7);
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.donation-input {
+    padding: 1em;
+    border-radius: 8px;
+    border: none;
+    background-color: whitesmoke;
+}
+
+.donation-btn {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    background-color: rgb(180, 244, 97);
+}
+
+@media only screen and (max-width: 600px) {
+    .donation {
+        flex-direction: column;
+    }
+
+    .donation-info {
+        width: 100%;
+    }
+
+    .nav-bar-pagetitle {
+        flex-direction: column;
+    }
+
+    .nav-bar-pagetitle img {
+        max-width: 20%;
+        height: auto;
+    }
+
+    .donation-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .donation-location-desc {
+        white-space: nowrap;
+        overflow-y: scroll;
+        text-overflow: ellipsis;
+    }
 }
