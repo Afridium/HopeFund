@@ -1,23 +1,21 @@
 console.log("Main JS File Linked");
 
+donationUpdate('donation-btn-1','donate-amount-1','donation-1');
+donationUpdate('donation-btn-2','donate-amount-2','donation-2');
+donationUpdate('donation-btn-3','donate-amount-3','donation-3');
 
-document.getElementById('donation-btn-1').addEventListener('click', function(){
-    const amount = document.getElementById('donate-amount-1').value;
-    if(isValid(amount)){
-        const newDonationAmount = getVal1('donate-amount-1');
-        const existingDonation = getVal2('donation-1')
-        const availableBalance = getVal2('accountBalance');
 
-        const donatedAmount = existingDonation + newDonationAmount;
-        const finalAccountBalance =  availableBalance - newDonationAmount;
-        if(newDonationAmount > availableBalance){
-            alert("Account Balance is not sufficient");
-        }else{
-           document.getElementById('accountBalance').innerText = finalAccountBalance; 
-           document.getElementById('donation-1').innerText = donatedAmount;
-        }
-        
-    }else{
-        alert("Enter numbers");
-    }
+document.getElementById('donation-page-button').addEventListener('click', function(){
+    document.getElementById('donation-history-button').classList.remove('btn-active');
+    document.getElementById('donation-history-button').classList.add('btn-primary');
+    document.getElementById('donation-page-button').classList.remove('btn-primary');
+    document.getElementById('donation-page-button').classList.add('btn-active');
+
+})
+document.getElementById('donation-history-button').addEventListener('click', function(){
+    document.getElementById('donation-page-button').classList.remove('btn-active');
+    document.getElementById('donation-page-button').classList.add('btn-primary');
+    document.getElementById('donation-history-button').classList.remove('btn-primary');
+    document.getElementById('donation-history-button').classList.add('btn-active');
+
 })
