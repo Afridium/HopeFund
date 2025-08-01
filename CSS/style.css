@@ -22,7 +22,7 @@
 
 /* Navigation Bar */
 nav{
-    padding-bottom: 1.2em;
+    padding-bottom: 2em;
 }
 
 .nav-bar-heading {
@@ -108,7 +108,7 @@ nav{
 }
 /* Donation Part */
 .donation-container {
-    padding-top: clamp(3em, 4vh, 5em);
+    padding-top: clamp(1.5em, 2.5vh, 3.5em);
     padding-bottom: clamp(3em, 8vh, 5em);
     padding-left: clamp(1em, 15vw, 15em);
     padding-right: clamp(1em, 15vw, 15em);
@@ -180,7 +180,27 @@ nav{
     font-weight: 700;
     background-color: rgb(180, 244, 97);
 }
-
+/* Transaction History */
+.transaction-history{
+    margin-top: 1em;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.hidden{
+    display: none;
+}
+.th-heading{
+    text-align: center;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    margin-top: 1em;
+    margin-bottom: 1.1em;
+}
+.pstyle{
+    border-bottom: 1px solid gray;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
 @media only screen and (max-width: 600px) {
     .donation {
         flex-direction: column;

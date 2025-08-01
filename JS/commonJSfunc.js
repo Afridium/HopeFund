@@ -1,3 +1,5 @@
+const { createElement } = require("react");
+
 function isValid(amount) {
     return /^[0-9]*\.?[0-9]+$/.test(amount) && parseFloat(amount) > 0;
 }
@@ -26,10 +28,21 @@ function donationUpdate(donateButtonID, donationAmountID, donationSectionID){
         }else{
            document.getElementById('accountBalance').innerText = finalAccountBalance; 
            document.getElementById(donationSectionID).innerText = donatedAmount;
+           addToHistory(newDonationAmount, finalAccountBalance);
         }
         
     }else{
         alert("Enter numbers");
     }
 })
+}
+
+function addToHistory(newDonationAmount, finalAccountbleBalance){
+    const section = document.getElementById('transaction-history');
+    const p = document.createElement('p');
+    const time = new Date();
+    p.innerText = `Donated Amount: ${newDonationAmount} | Available Balance: ${finalAccountbleBalance}. | Time: [${time.toLocaleString()}]`;
+    p.style.color = 'grey';
+    p.classList.add('pstyle');
+    section.appendChild(p);
 }
