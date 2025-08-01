@@ -14,7 +14,16 @@
     padding: 0;
 }
 
+.sticky {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(8px);
+}
+
 /* Navigation Bar */
+nav{
+    padding-bottom: 1.2em;
+}
 .nav-bar-container {}
 
 .nav-bar-heading {
@@ -26,7 +35,7 @@
     padding-right: min(5em, 8%);
     padding-top: min(1.2rem, 8%);
     padding-bottom: min(1.2rem, 8%);
-    background-color: rgb(249, 247, 243);
+    background-color: rgba(249, 247, 243,0.9);
 }
 
 .btn-blog {
@@ -63,7 +72,7 @@
     display: flex;
     gap: 3rem;
     justify-content: center;
-    margin-top: clamp(1em, 10vh, 5em);
+    margin-top: clamp(1em, 6vh, 5em);
 }
 
 .toggle-buttons>button {
@@ -81,7 +90,7 @@
 
 /* Donation Part */
 .donation-container {
-    padding-top: clamp(3em, 8vh, 5em);
+    padding-top: clamp(3em, 4vh, 5em);
     padding-bottom: clamp(3em, 8vh, 5em);
     padding-left: clamp(1em, 15vw, 15em);
     padding-right: clamp(1em, 15vw, 15em);
