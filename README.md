@@ -14,6 +14,7 @@ Key Features:
 
   3, Toggleable Pages
       Buttons that switches between:
+			
         a. The main donation page.
         b. A transaction history page (to view past donations).
 
