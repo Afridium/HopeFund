@@ -12,7 +12,7 @@
     <nav class="sticky">
         <div class="nav-bar-container">
             <div class="nav-bar-heading">
-                <button class="btn-blog">Blog</button>
+                <button class="btn-blog" id="btn-blog">Blog</button>
                 <div class="nav-bar-pagetitle">
                     <img class="logo" src="./assets/logo.png" alt="">
                     <h4 class="pagetitle">HopeFund Bangladesh</h4>
@@ -104,6 +104,15 @@
          <div class="transaction-history hidden" id="transaction-history">
             <h1 class="th-heading">Transaction History</h1>
             <hr class="hr">
+         </div>
+
+         <div class="modal-container hidden" id="modal-container">
+            <div class="modal" id="modal">
+                <img class="modal-icon" src="./assets/coin.png" alt="">
+                <div id="modal-text"></div>
+                <p class="modal-subtext">Thank You</p>
+                <button class="btn-blog" id="modal-close-btn">Close</button>
+            </div>
          </div>
     </main>
     <footer>

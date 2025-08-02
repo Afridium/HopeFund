@@ -29,6 +29,7 @@ function donationUpdate(donateButtonID, donationAmountID, donationSectionID){
            document.getElementById('accountBalance').innerText = finalAccountBalance; 
            document.getElementById(donationSectionID).innerText = donatedAmount;
            addToHistory(newDonationAmount, finalAccountBalance);
+           showModal(newDonationAmount);
         }
         
     }else{
@@ -45,4 +46,19 @@ function addToHistory(newDonationAmount, finalAccountbleBalance){
     p.style.color = 'grey';
     p.classList.add('pstyle');
     section.appendChild(p);
+}
+
+function showModal(newDonationAmount){
+     // Clear previous content first
+    const modal = document.getElementById('modal-text');
+    modal.innerHTML = ''; // Clear existing content
+    
+    // Create and append new content
+    const h3 = document.createElement('h3');
+    h3.innerText = `You Have Donated ${newDonationAmount}`;
+    h3.classList.add('modal-text');
+    modal.appendChild(h3);
+    
+    // Show the modal
+    document.getElementById('modal-container').classList.remove('hidden');
 }

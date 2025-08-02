@@ -140,9 +140,7 @@ nav{
 }
 
 .donation-amount {
-    background-color: whitesmoke;
     padding: .2em;
-    width: clamp(5.2em, 18%, 5.2em);
     border-radius: 5px;
 }
 
@@ -200,6 +198,43 @@ nav{
     border-bottom: 1px solid gray;
     padding-bottom: 1em;
     padding-top: 1em;
+}
+
+/* MODAL */
+.modal-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.3s ease-in-out;
+}
+.modal{
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 3em;
+}
+.modal-icon{
+    width: 50px;
+    height: auto;
+}
+.modal-text{
+    font-size: clamp(1rem, 2vw, 2rem);
+    margin-bottom: 0.1em;
+}
+.modal-subtext{
+    color: gray;
+    margin-bottom: .9em;
+}
+.hidden{
+    display: none;
 }
 @media only screen and (max-width: 600px) {
     .donation {

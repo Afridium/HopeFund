@@ -27,3 +27,11 @@ document.getElementById('donation-history-button').addEventListener('click', fun
     historyPage.classList.remove('hidden');
 
 })
+
+document.getElementById('btn-blog').addEventListener('click', function(){
+    window.location.href ="./blog.html";
+})
+
+document.getElementById('modal-close-btn').addEventListener('click', function(){
+    document.getElementById('modal-container').classList.add('hidden');
+});
