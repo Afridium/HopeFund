@@ -1,16 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/blog.css">
     <title>Blogpage</title>
 </head>
-<body>
-    <h1>Blog Section</h1>
-    <button class="btn-blog" id="btn-home">Home</button>
+
+<body class="lexend-font">
+    <nav style="padding-bottom: 0;">
+        <div class="nav-bar-container" style="padding-bottom: 0;">
+            <div class="nav-bar-heading">
+                <button class="btn-blog" id="btn-home">Home</button>
+                <div class="nav-bar-pagetitle">
+                    <img class="logo" src="./assets/logo.png" alt="">
+                    <h4 class="pagetitle">HopeFund Bangladesh</h4>
+                </div>
+                <div class="amount-container">
+                    <img height="20px" width="20px" src="./assets/coin.png" alt="">
+                    <p>
+                        <span id="accountBalance">5500</span><span>BDT</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="accordion-container">
+        <div class="accordion-inner">
+            <ul class="accordion">
+                <li>
+                    <label for="item-1" class="accordion-heading">
+                        What is the document object model? (DOM)
+                        <span class="arrow">›</span>
+                    </label>
+                    <input type="checkbox" id="item-1" class="accordion-toggle">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="accordion">
+                <li>
+                    <label for="item-2" class="accordion-heading">
+                        What is JavaScript?
+                        <span class="arrow">›</span>
+                    </label>
+                    <input type="checkbox" id="item-2" class="accordion-toggle">
+                    <div class="content">
+                        <p>JavaScript is a programming language.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
 
     <script src="./JS/commonJSfunc.js"></script>
+    <script src="./JS/mainJS.js"></script>
     <script src="./JS/blogpageJS.js"></script>
 </body>
+
 </html>

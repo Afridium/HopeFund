@@ -1,0 +1,47 @@
+.accordion-container {
+  padding: 20px;
+}
+
+.accordion {
+  background-color: rgb(239, 232, 232);
+  width: 50%;
+  margin: 0 auto 1em;
+  list-style: none;
+  padding: 1em;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.accordion-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding-bottom: 1em;
+  border-bottom: 1px solid grey;
+}
+
+.accordion-toggle {
+  display: none; /* Hide the checkbox */
+}
+
+.accordion .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+/* Rotate arrow when accordion is open */
+.accordion-toggle:checked ~ .content {
+  max-height: 400px;
+}
+
+.accordion-toggle:checked + .accordion-heading .arrow {
+  transform: rotate(90deg);
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
